@@ -1,0 +1,84 @@
+# ROADMAP - Projeto BI Portfolio
+# Tema: Análise de E-commerce - Marketplace Performance & Churn
+
+Objetivo:
+Construir um pipeline completo de dados usando Python, Google BigQuery e visualizações em Looker Studio e Power BI.
+Resolver um problema real de negócio:
+  - Reduzir churn
+  - Melhorar performance dos vendedores
+  - Otimizar logística e experiência do cliente
+
+Dataset:
+- Brazilian E-Commerce Public Dataset by Olist (Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?resource=download)
+
+---
+
+# Fase 1 - Exploração e Entendimento dos Dados
+[✅] Baixar dataset do Kaggle
+[✅] Carregar no Jupyter Notebook
+[⏩] Análise exploratória inicial (EDA)
+[✅] Identificar tabelas, chaves e relacionamento entre entidades
+[⏩] Levantar hipóteses de negócio
+
+# Fase 2 - Tratamento e Limpeza
+[ ] Limpar campos inconsistentes e nulos
+[ ] Padronizar datas e campos de texto
+[ ] Criar colunas derivadas (ex: tempo de entrega, status de cliente)
+[ ] Documentar dicionário de dados
+
+# Fase 3 - Modelagem e Carga no BigQuery
+[ ] Criar projeto no Google Cloud Platform (GCP)
+[ ] Provisionar dataset no BigQuery
+[ ] Preparar scripts de carga (Python → BigQuery)
+[ ] Modelar tabelas (estrela: fatos + dimensões)
+
+# Fase 4 - Análises Avançadas
+[ ] Escrever queries SQL para KPIs de negócio:
+    - % churn
+    - tempo médio de entrega
+    - avaliação média
+    - receita por região/categoria
+    - conversão por vendedor
+    - cohort analysis
+    - clusterização de clientes
+[ ] Validar resultados com dataset
+
+# Fase 5 - Visualizações e Dashboards
+[ ] Construir dashboard corporativo no Looker Studio
+[ ] Construir dashboard exploratório no Power BI
+[ ] Comparar vantagens e limitações de cada ferramenta
+[ ] Documentar insights e recomendações
+
+# Fase 6 - Documentação Final
+[ ] Criar README.md com:
+    - Objetivo
+    - Descrição do problema
+    - Pipeline utilizado
+    - Tecnologias
+    - Prints dos dashboards
+    - Instruções de uso
+[ ] Criar vídeo ou apresentação em PDF com storytelling
+[ ] Publicar no GitHub
+[ ] Compartilhar no LinkedIn
+
+---
+
+# Tecnologias
+- Python (Pandas, SQLAlchemy, Google Cloud SDK)
+- Google BigQuery
+- Looker Studio
+- Power BI
+- Jupyter Notebook
+- GitHub
+
+---
+
+# Diferenciais
+- Projeto end-to-end
+- Integração entre stack moderna e ferramentas de BI
+- Foco em problema real de negócio
+- Storytelling de insights
+- Reutilizável para entrevistas e portfólio público
+
+---
+
