@@ -1,0 +1,36 @@
+SELECT
+bo.order_id,
+bo.customer_id,
+boi.order_item_id,
+br.review_id,
+CAST(order_approved_at AS timestamp) AS data_captura,
+DATE_TRUNC(CAST(order_approved_at AS timestamp), YEAR) AS ano_data_captura,
+DATE_TRUNC(CAST(order_approved_at AS timestamp), QUARTER) AS quarter_data_captura,
+DATE_TRUNC(CAST(order_approved_at AS timestamp), MONTH) AS mes_data_captura,
+DATE_TRUNC(CAST(order_approved_at AS timestamp), DAY) AS dia_data_captura,
+CAST(order_purchase_timestamp AS timestamp) AS data_pedido,
+CAST(order_delivered_carrier_date AS timestamp) AS data_postagem,
+CAST(order_delivered_customer_date AS timestamp) AS data_recebimento,
+customer_state as uf,
+concat(customer_city," - ",customer_state) AS local,
+CASE
+  WHEN customer_state IN ('SP', 'RJ', 'MG', 'ES') THEN 'Sudeste'
+  WHEN customer_state IN ('PR', 'SC', 'RS') THEN 'Sul'
+  WHEN customer_state IN ('DF', 'GO', 'MT', 'MS') THEN 'Centro-Oeste'
+  WHEN customer_state IN ('AL', 'BA', 'CE', 'MA', 'PB', 'PE', 'PI', 'RN', 'SE') THEN 'Nordeste'
+  WHEN customer_state IN ('AC', 'AP', 'AM', 'PA', 'RO', 'RR', 'TO') THEN 'Norte'
+  ELSE 'Outro'
+END AS regiao,
+order_status AS status_pedido,
+bpr.product_category_name as categoria_produto,
+DATE_DIFF(CAST(order_delivered_customer_date AS timestamp), CAST(order_delivered_carrier_date AS timestamp), DAY) AS gap_entrega,
+boi.price as valor,
+br.review_score as nota
+FROM `bronze.olist_orders` as bo
+LEFT JOIN `bronze.olist_order_items` as boi ON bo.order_id = boi.order_id
+LEFT JOIN `bronze.olist_products` as bpr ON boi.product_id = bpr.product_id
+LEFT JOIN `bronze.olist_reviews` as br ON bo.order_id = br.order_id
+LEFT JOIN `bronze.olist_customers` as bc ON bo.customer_id = bc.customer_id
+WHERE order_status in ('approved', 'delivered', 'invoiced', 'shipped')
+AND order_approved_at IS NOT NULL
+ORDER BY CAST(order_approved_at AS timestamp), bo.order_id
