@@ -9,6 +9,10 @@
 
 <img width="795" height="866" alt="image" src="https://github.com/user-attachments/assets/a65d03a1-19f8-456a-89b4-b4ffa9fa7acf" />
 
+#### Dados [Power query]
+<img width="1908" height="517" alt="image" src="https://github.com/user-attachments/assets/46ba6379-2767-453e-a83d-58b7c4b1c50f" />
+
+
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-blue.svg)
@@ -89,69 +93,25 @@ graph TD
 
 ## 🔄 **Fluxo de Trabalho (Workflow)**
 
-________________________________________________________________________
 
 ### **1️⃣ Extração & Tratamento (Python)**
-```python
-# Pipeline automatizado de limpeza
-def clean_olist_data():
-    # ✅ Padronização de colunas
-    # ✅ Conversão de tipos de dados  
-    # ✅ Tratamento de nulos e outliers
-    # ✅ Normalização de datas
-    # ✅ Validação de integridade
-```
+[Acesse Aqui o codigo aqui](https://github.com/Thiago-Folgado/eccomerce_olist/blob/main/scripts/etl.py)
 
-### **2️⃣ Modelagem Dimensional (SQL)**
-```sql
--- View consolidada principal
-CREATE VIEW gold.vw_vendas_consolidada AS
-SELECT 
-    v.order_id,
-    -- 📊 Métricas de Vendas
-    v.price,
-    v.freight_value,
-    (v.price + v.freight_value) AS ticket_total,
-    
-    -- 🚚 Métricas Logísticas  
-    DATE_DIFF(v.order_delivered_date, v.order_purchase_date, DAY) AS dias_entrega,
-    
-    -- ⭐ Métricas de Satisfação
-    av.review_score,
-    CASE 
-        WHEN av.review_score >= 4 THEN 1 
-        ELSE 0 
-    END AS promotor_nps
-FROM vendas v
-LEFT JOIN avaliacoes av USING(order_id)
--- ... joins adicionais
-```
-
-
+### **2️⃣ Modelagem e querys (SQL)**
+[Acesse Aqui o codigo aqui](https://github.com/Thiago-Folgado/eccomerce_olist/blob/main/docs/query_main_olist.txt)
 
 ### **3️⃣ Dashboards Inteligentes**
 - **Looker Studio**: Atualização automática via BigQuery
 - **Power BI**: Atualização automática via BigQuery
 - **Métricas em Tempo Real**
 
-### **🧮 Métricas Calculadas (DAX/SQL)**
-```sql
--- NPS Estimado por Período
-nps_score = 
-    (COUNT(promotores) - COUNT(detratores)) / 
-    COUNT(total_avaliacoes) * 100
-
--- Ticket Médio com Frete
-ticket_medio = 
-    SUM(price + freight_value) / 
-    COUNT(DISTINCT order_id)
-
--- Prazo Médio de Entrega
-prazo_entrega = 
-    AVG(DATE_DIFF(delivered_date, purchase_date, DAY))
+### **🧮 Métricas Calculadas (DAX)**
+```Exemplos
+Clientes = DISTINCTCOUNT(olist_main[customer_id])
+Faturamento = SUM(olist_main[valor])
+Itens = COUNT(olist_main[order_id])
+Media de vendas = AVERAGEX(olist_main,DISTINCTCOUNT(olist_main[order_id]))
 ```
-
-________________________________________________________________________
 
 ## 📊 **Dashboards em Produção**
 
@@ -192,33 +152,19 @@ ________________________________________________________________________
 - **Análise de satisfação** por fornecedor
 - **Planejamento de demanda** sazonal
 
-________________________________________________________________________
-
 ## 📁 **Estrutura do Repositório**
 
 ```
 ecommerce-olist-bi/
-├── 📊 dashboards/
-│   ├── executive-dashboard.pdf          # Preview Looker Studio
-│   └── analytical-dashboard.pbix        # Arquivo Power BI
-├── 🐍 etl/
-│   ├── extract_transform.py             # Pipeline Python
-│   ├── load_bigquery.py                 # Carga para BigQuery
-│   └── data_validation.py               # Testes de qualidade
-├── 📝 sql/
-│   ├── bronze_layer/                    # Tabelas raw
-│   ├── silver_layer/                    # Dados limpos
-│   └── gold_layer/                      # Datamarts e views
-├── 📋 docs/
-│   ├── data_dictionary.md               # Dicionário de dados
-│   ├── business_rules.md                # Regras de negócio
-│   └── architecture.md                  # Documentação técnica
-├── 🧪 tests/
-│   └── data_quality_tests.sql           # Testes automatizados
+├── 📁 docs/
+│   ├── Diagram.png                      # Print Diagrama
+│   └── query_main.txt                   # Query SQL utilizada para criar view principal
+├── 🐍 scripts/
+│   ├── etl.py                           # Pipeline Python
+│   ├── etl.ipymb                        # Pipeline Python (notebook)
 └── 📦 requirements.txt                  # Dependências Python
 ```
 
-________________________________________________________________________
 
 ## 📈 **Resultados & Impacto**
 
