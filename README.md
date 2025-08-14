@@ -254,7 +254,7 @@ ________________________________________________________________________
 - 📊 Projetos com Python, Pandas, e ferramentas de BI
 
 - **Projetos Relacionados:**
-- 📚 [Análise ENEM]([https://github.com/Thiago-Folgado/enem/blob/main/README.md])
+- 📚 [Análise ENEM](https://github.com/Thiago-Folgado/enem/blob/main/README.md)
 
 **Contato**: [LinkedIn](https://www.linkedin.com/in/thiagohenriquef/) | [Portfólio](https://thiagofolgado.framer.website/)
 
