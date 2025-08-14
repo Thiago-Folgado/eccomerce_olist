@@ -238,8 +238,8 @@ ________________________________________________________________________
 ## 🔗 **Links dos Projetos**
 
 ### **📊 Dashboards Live**
-- 🎯 **[Executive Dashboard - Looker Studio]([https://link-looker-studio](https://lookerstudio.google.com/u/1/reporting/72b37ad7-7c32-42a7-99b5-3baeee349e7f/page/p7wOF))**: Visão estratégica para C-Level
-- 📈 **[Analytical Dashboard - Power BI]([https://link-power-bi](https://app.powerbi.com/view?r=eyJrIjoiZTA4MTQ5YzQtOWYyZi00MGQ0LTkzZTctYjg4MGIyZjI5Y2Y0IiwidCI6IjJjMTQ4MTM4LTc1YWUtNDY0MC04N2I0LWZkNGMxZDIxMWMwOCJ9&pageName=a62acd9e029ce297b037))**: Exploração interativa para analistas
+- 🎯 **[Executive Dashboard - Looker Studio]([https://lookerstudio.google.com/u/1/reporting/72b37ad7-7c32-42a7-99b5-3baeee349e7f/page/p7wOF])**: Visão estratégica para C-Level
+- 📈 **[Analytical Dashboard - Power BI]([https://app.powerbi.com/view?r=eyJrIjoiZTA4MTQ5YzQtOWYyZi00MGQ0LTkzZTctYjg4MGIyZjI5Y2Y0IiwidCI6IjJjMTQ4MTM4LTc1YWUtNDY0MC04N2I0LWZkNGMxZDIxMWMwOCJ9&pageName=a62acd9e029ce297b037])**: Exploração interativa para analistas
 
 ### **💻 Código & Documentação**
 - 🐙 **[GitHub Repository]([https://github.com/Thiago-Folgado/eccomerce_olist])**: Código completo ETL + SQL
@@ -254,7 +254,7 @@ ________________________________________________________________________
 - 📊 Projetos com Python, Pandas, e ferramentas de BI
 
 - **Projetos Relacionados:**
-- 📚 [Análise ENEM]([https://github.com/seu-usuario/projeto-enem-2023](https://github.com/Thiago-Folgado/enem/blob/main/README.md))
+- 📚 [Análise ENEM]([https://github.com/Thiago-Folgado/enem/blob/main/README.md])
 
 **Contato**: [LinkedIn](https://www.linkedin.com/in/thiagohenriquef/) | [Portfólio](https://thiagofolgado.framer.website/)
 
