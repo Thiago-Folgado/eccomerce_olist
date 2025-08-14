@@ -24,7 +24,7 @@
 
 *Solução completa de Business Intelligence para e-commerce, desde ETL automatizado até dashboards executivos, processando 100k+ transações da plataforma Olist (dados Kangl).*
 
-[📊 Ver Dashboard Power Bi](#-https://app.powerbi.com/view?r=eyJrIjoiZTA4MTQ5YzQtOWYyZi00MGQ0LTkzZTctYjg4MGIyZjI5Y2Y0IiwidCI6IjJjMTQ4MTM4LTc1YWUtNDY0MC04N2I0LWZkNGMxZDIxMWMwOCJ9&pageName=a62acd9e029ce297b037) • [📊 Ver Dashboard Looker Studio](#-https://lookerstudio.google.com/u/1/reporting/72b37ad7-7c32-42a7-99b5-3baeee349e7f/page/p7wOF)
+[📊 Ver Dashboard Power Bi](https://app.powerbi.com/view?r=eyJrIjoiZTA4MTQ5YzQtOWYyZi00MGQ0LTkzZTctYjg4MGIyZjI5Y2Y0IiwidCI6IjJjMTQ4MTM4LTc1YWUtNDY0MC04N2I0LWZkNGMxZDIxMWMwOCJ9&pageName=a62acd9e029ce297b037) • [📊 Ver Dashboard Looker Studio](https://lookerstudio.google.com/u/1/reporting/72b37ad7-7c32-42a7-99b5-3baeee349e7f/page/p7wOF)
 
 </div>
 
@@ -41,7 +41,7 @@ Este projeto implementa uma **solução de BI end-to-end** para análise de perf
 ## ⚙️ **Stack Tecnológica**
 
 ### **🔧 ETL & Processamento**
-- **Python **: Pandas, google-cloud-bigquery
+- **Python**: Pandas, google-cloud-bigquery
 - **Google Cloud Platform**: BigQuery (Data Warehouse)
 - **SQL**: Modelagem dimensional, views e métricas avançadas
 
@@ -106,7 +106,8 @@ graph TD
 - **Métricas em Tempo Real**
 
 ### **🧮 Métricas Calculadas (DAX)**
-```Exemplos
+Exemplos
+```
 Clientes = DISTINCTCOUNT(olist_main[customer_id])
 Faturamento = SUM(olist_main[valor])
 Itens = COUNT(olist_main[order_id])
