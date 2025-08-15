@@ -1,17 +1,19 @@
 # 🛒 E-commerce Analytics Olist: Projeto BI End-to-End
 
 # Galeria
+
+#### Dados [Power BI]
 <img width="1427" height="801" alt="image" src="https://github.com/user-attachments/assets/e002e1c2-1756-420e-b039-978de375252c" />
 
 <img width="1024" height="578" alt="image" src="https://github.com/user-attachments/assets/60008e50-013e-44b1-8daa-54c318b23390" />
 
 <img width="1024" height="574" alt="image" src="https://github.com/user-attachments/assets/12130c97-b348-4889-ba43-0ac11628f030" />
 
-<img width="795" height="866" alt="image" src="https://github.com/user-attachments/assets/a65d03a1-19f8-456a-89b4-b4ffa9fa7acf" />
-
 #### Dados [Power query]
 <img width="1908" height="517" alt="image" src="https://github.com/user-attachments/assets/46ba6379-2767-453e-a83d-58b7c4b1c50f" />
 
+#### Dados [Looker Studio]
+<img width="795" height="866" alt="image" src="https://github.com/user-attachments/assets/a65d03a1-19f8-456a-89b4-b4ffa9fa7acf" />
 
 <div align="center">
 
